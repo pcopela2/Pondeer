@@ -1,0 +1,6 @@
+@PondeerWithTailwind.Api_HostAddress = http://localhost:5211
+
+GET {{PondeerWithTailwind.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,21 @@
+@page "/testapi"
+@using PondeerWithTailwind.Services
+@inject ApiService ApiService
+
+<h1>Test API Connection</h1>
+
+<button class="btn btn-primary" @onclick="TestApiConnection">Test Connection</button>
+
+@if (!string.IsNullOrEmpty(connectionResult))
+{
+    <p>@connectionResult</p>
+}
+
+@code {
+    private string connectionResult = string.Empty;
+
+    private async Task TestApiConnection()
+    {
+        connectionResult = await ApiService.TestApiConnection();
+    }
+}
